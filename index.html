@@ -1,116 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hert - Meus Projetos</title>
   <style>
     body {
+      background-color: #1e1e1e;
+      color: #ffffff;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
     }
+
     header {
-      background-color: #333;
-      color: white;
-      padding: 2rem 0;
+      background: linear-gradient(45deg, #6a0080, #8e44ad);
+      padding: 20px;
       text-align: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      height: 80px; /* Defina a altura desejada */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 15px; /* Adiciona bordas redondas */
+      position: relative;
     }
-    header img {
-      width: 200px; 
-      height: auto;
-    } 
-    header div {
-      text-align: center;
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      border-radius: 20px;
+      background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1));
+      z-index: -1; /* Coloca o contorno atrás do cabeçalho */
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+
+    img {
+      max-height: 120px; /* Defina a altura desejada */
+      width: auto;
     }
-    header p {
-      margin-top: 5px;
-      font-size: 1.1rem;
-      opacity: 0.8;
-    }
+
     main {
-      flex: 1;
-      max-width: 800px;
-      margin: 0 auto;
       padding: 20px;
     }
+
     section {
-      margin-bottom: 30px;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 20px;
-    }
-    h2 {
-      color: #333;
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    a {
-      color: #007bff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      text-align: center;
-      padding: 20px 0;
-      background-color: #333;
-      color: white;
-      opacity: 0.8;
-    }
-    .logo {
-      text-align: center;
       margin-bottom: 20px;
+      background-color: #333333;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     }
-    .logo img {
-    width: 300px;
-    height: auto; 
-  }
+
+    h2 {
+      color: #6a0080;
+      font-size: 28px; /* Ajusta o tamanho do texto */
+      margin-bottom: 10px; /* Adiciona espaçamento inferior */
+    }
+    h3 {
+        color:#ffffff;
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .downloads {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .download-card {
+      background-color: #444444;
+      padding: 20px;
+      border-radius: 10px;
+      margin: 10px;
+      width: 200px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      transition: transform 0.3s; /* Adiciona transição para a animação */
+    }
+
+    .download-card:hover {
+      transform: scale(1.05); /* Aumenta o tamanho em 5% ao passar o mouse */
+    }
+
+    .download-btn {
+      background-color: #6a0080;
+      color: #ffffff;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 10px;
+      width: 100%;
+    }
+
+    .download-btn:hover {
+      background-color: #8e44ad;
+    }
   </style>
+  <script>
+    function redirectToLink(link) {
+      window.location.href = link;
+    }
+  </script>
+  <title>Hert</title>
 </head>
 <body>
-  
   <header>
-    <img src="logo_white.png" alt="Logo White" /> 
-    <div>
-      <p>Projetos do GitHub</p>
-    </div>
+    <img src="logo_white.png" alt="Logo da Empresa">
   </header>
   <main>
     <section>
-      <h2>Hert Social</h2>
-      <p>No Hert Social, você pode fazer posts dentro de sua máquina local. Os posts são armazenados no seu navegador, não é possível interagir com usuários de outras plataformas.</p>
-      <p>Link: <a href="https://redohert.github.io/hertsocial.github.io/">Hert Social</a></p>
+      <h2>Bem-vindo a Hert!</h2>
+      <h3>Projetos:</h3>
     </section>
-    <section>
-      <h2>Hert Tradutor</h2>
-      <p>O Hert Tradutor funciona como um tradutor genérico, ele usa a API da Google e tem suporte para diversos idiomas.</p>
-      <p>Link: <a href="https://redohert.github.io/herttradutor.github.io/">Hert Tradutor</a></p>
-    </section>
-    <section>
-      <h2>Download Wikipedia</h2>
-      <p>O Download Wikipedia é um programa que permite realizar pesquisas na Wikipedia em tempo real.</p>
-      <p>Link: <a href="https://redohert.github.io/downloadwikipedia.github.io/">Download Wikipedia</a></p>
+    <section class="downloads">
+      <div class="download-card">
+        <h3>Hert Social</h3>
+        <p>No Hert Social, você pode fazer posts dentro de sua máquina local. Os posts são armazenados no seu navegador, não é possível interagir com usuários de outras plataformas.</p>
+        <button class="download-btn" onclick="redirectToLink('https://redohert.github.io/hertsocial.github.io/')">Ir</button>
+      </div>
+      <div class="download-card">
+        <h3>Hert Tradutor</h3>
+        <p>O Hert Tradutor funciona como um tradutor genérico, ele usa a API da Google e tem suporte para diversos idiomas.</p>
+        <button class="download-btn" onclick="redirectToLink('https://redohert.github.io/herttradutor.github.io/')">Ir</button>
+      </div>
+      <div class="download-card">
+        <h3>Download Wikipedia</h3>
+        <p>O programa Wikipedia é um programa que permite realizar pesquisas na Wikipedia em tempo real.</p>
+        <button class="download-btn" onclick="redirectToLink('https://redohert.github.io/downloadwikipedia.github.io/')">Ir</button>
+      </div>
     </section>
   </main>
-  <div class="logo">
-    <img src="logo.png" alt="Logo Hert" />
-  </div>
-  <footer>
-    <p>&copy; 2023 Hert. Todos os direitos reservados.</p>
-  </footer>
 </body>
 </html>
